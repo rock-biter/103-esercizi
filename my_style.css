@@ -1,0 +1,127 @@
+.ex-10-icon {
+	/* transform: rotate(90deg); */
+	/* animation: spin-10 2s infinite; */
+	animation-name: spin-10;
+	animation-duration: 3000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes spin-10 {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.ex-11-icon {
+	animation-name: spin-11;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-play-state: paused;
+}
+
+.ex-11-icon:hover {
+	animation-play-state: running;
+}
+
+@keyframes spin-11 {
+	0% {
+		transform: rotate(0turn);
+	}
+	90% {
+		transform: rotate(0.9turn);
+	}
+	100% {
+		transform: rotate(0turn);
+	}
+}
+
+/*
+ex 12
+*/
+
+.ex-12-button:hover .ex-12-top-white {
+	animation-name: slide-ex-12-top;
+}
+
+.ex-12-top-white,
+.ex-12-bottom-white {
+	animation-duration: 2s;
+	animation-timing-function: linear;
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+	animation-name: slide-ex-12-bottom;
+}
+
+@keyframes slide-ex-12-top {
+	0% {
+		left: 10%;
+	}
+	50% {
+		left: 55%;
+	}
+	100% {
+		left: 10%;
+	}
+}
+
+@keyframes slide-ex-12-bottom {
+	0% {
+		right: 10%;
+	}
+	50% {
+		right: 55%;
+	}
+	100% {
+		right: 10%;
+	}
+}
+
+/*
+ex 13
+*/
+
+.ex-13-button > div {
+	/* background-color: tomato; */
+}
+
+.ex-13-bottom-white {
+	display: none;
+}
+
+.ex-13-button:hover .ex-13-top-white {
+	animation: slide-ex-13-top 1s linear;
+}
+
+@keyframes slide-ex-13-top {
+	0% {
+		left: 10%;
+		top: -10px;
+	}
+	30% {
+		left: 85%;
+		top: -10px; /*top right*/
+	}
+	45% {
+		left: 85%;
+		top: calc(100% - 10px); /*bottom right*/
+	}
+	75% {
+		/*bottom left*/
+		left: -10%;
+		top: calc(100% - 10px);
+	}
+	95% {
+		/*top left*/
+		left: -10%;
+		top: -10px;
+	}
+	100% {
+		left: 10%;
+		top: -10px;
+	}
+}
