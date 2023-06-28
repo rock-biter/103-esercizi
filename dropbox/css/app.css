@@ -1,3 +1,7 @@
+:root {
+	--blue: #0061ff;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -47,8 +51,20 @@ menu {
 	width: calc(100% / 3);
 }
 
+.col-50 {
+	width: 50%;
+}
+
 .col-60 {
 	width: calc((100% / 3) * 2);
+}
+
+.col-100 {
+	width: 100%;
+}
+
+.w-full {
+	width: 100%;
 }
 
 /*
@@ -105,6 +121,12 @@ HERO
 	margin-bottom: 48px;
 }
 
+.title-2 {
+	font-size: 38px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
 /*
 BUTTON 
 */
@@ -117,8 +139,8 @@ BUTTON
 }
 
 .button--blue {
-	background-color: #0061ff;
-	border-color: #0061ff;
+	background-color: var(--blue);
+	border-color: var(--blue);
 	color: white;
 }
 
@@ -132,4 +154,121 @@ BUTTON
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 30px;
+}
+
+.plans {
+	padding: 120px 0 70px 0;
+}
+
+/* radio input */
+.radio-buttons__wrapper {
+	margin: 30px 0;
+}
+
+.radio-input {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	margin-right: 24px;
+}
+
+.circle {
+	width: 20px;
+	height: 20px;
+	/* aspect-ratio: 1 / 1; */
+	border: 2px solid #d1d1d1;
+	border-radius: 50%;
+	display: block;
+}
+
+.square {
+	aspect-ratio: 1 / 1;
+}
+
+.circle.checked {
+	border-color: var(--blue);
+	border-width: 4px;
+}
+
+.cards-wrapper {
+	gap: 50px;
+	flex-wrap: wrap;
+}
+
+.cards-wrapper .col {
+	/* width: calc((100% - 100px) / 3); */
+	flex-grow: 1;
+	flex-basis: 0;
+}
+
+.card {
+	border: 1px solid black;
+	height: 100%;
+}
+
+.card__header {
+	padding: 13px 0;
+	text-align: center;
+	border-bottom: 1px solid black;
+}
+
+.card__body {
+	padding: 32px 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 45px;
+}
+
+.plan__title {
+	font-size: 24px;
+}
+
+.plan__features,
+.plan__header {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.feature {
+	display: flex;
+	gap: 8px;
+	font-size: 12px;
+}
+
+.icons--blue i {
+	color: var(--blue);
+}
+
+.plan__cta {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.plan__cta a:not(.button--blue) {
+	color: var(--blue);
+	text-decoration: underline;
+}
+
+.plan__cta::after {
+	content: '';
+	display: block;
+	height: 1px;
+	background-color: black;
+	width: 45px;
+}
+
+.card--landscape .row {
+	align-items: center;
+	justify-content: space-between;
+}
+
+.card--landscape p {
+	max-width: 700px;
+	margin-top: 32px;
+}
+
+.card--landscape .card__body {
+	gap: 10px;
 }
